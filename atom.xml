@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>孙振东的个人博客</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-01-20T15:41:50.572Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>deskFish</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Gzip相关设置</title>
+    <link href="http://yoursite.com/2019/01/20/Gzip%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE/"/>
+    <id>http://yoursite.com/2019/01/20/Gzip相关设置/</id>
+    <published>2019-01-20T15:40:56.000Z</published>
+    <updated>2019-01-20T15:41:50.572Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Gzip相关设置"><a href="#Gzip相关设置" class="headerlink" title="Gzip相关设置"></a>Gzip相关设置</h1><p>作用：用来压缩网络参数</p><p>相关参数：<br>①compression –是否开启Gzip压缩<br>②compressableMimeType –压缩类型 默认：html、xml、txt</p><p>③compressMinSize –压缩后输出内容大小（压缩后缓冲区大小）默认2048B（2KB）</p><p><img src="//upload-images.jianshu.io/upload_images/12417676-cde9769211cad3e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/460/format/webp" alt="image"></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;</span><br><span class="line">               maxConnections=&quot;3000&quot;</span><br><span class="line">               maxThreads=&quot;500&quot;</span><br><span class="line">               acceptCount=&quot;500&quot;</span><br><span class="line">               compression=&quot;true&quot;</span><br><span class="line">               compressionMinSize=&quot;2048&quot;</span><br><span class="line">               connectionTimeout=&quot;20000&quot;</span><br><span class="line">               redirectPort=&quot;8443&quot; /&gt;</span><br></pre></td></tr></table></figure><h1 id="其他项配置"><a href="#其他项配置" class="headerlink" title="其他项配置"></a>其他项配置</h1><p>enableLookups – 开启反查域名（对性能有影响，但是某种场景下很好用。）</p><p>connectionTimeout – 网络连接超时阈值（默认20000）</p><p>minSpareThreads – 最小空闲线程数（在没有访问的情况下最小保持多少活跃）</p><p>最终版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;</span><br><span class="line">               maxConnections=&quot;3000&quot;</span><br><span class="line">               maxThreads=&quot;500&quot;</span><br><span class="line">               acceptCount=&quot;500&quot;</span><br><span class="line">               minspareThreads=&quot;100&quot;</span><br><span class="line">               compression=&quot;true&quot;</span><br><span class="line">               compressionMinSize=&quot;2048&quot;</span><br><span class="line">               connectionTimeout=&quot;20000&quot;</span><br><span class="line">               redirectPort=&quot;8443&quot; /&gt;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Gzip相关设置&quot;&gt;&lt;a href=&quot;#Gzip相关设置&quot; class=&quot;headerlink&quot; title=&quot;Gzip相关设置&quot;&gt;&lt;/a&gt;Gzip相关设置&lt;/h1&gt;&lt;p&gt;作用：用来压缩网络参数&lt;/p&gt;
+&lt;p&gt;相关参数：&lt;br&gt;①compression –是否开启
+      
+    
+    </summary>
+    
+    
+      <category term="Gzip" scheme="http://yoursite.com/tags/Gzip/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2019/01/20/hello-world/"/>
+    <id>http://yoursite.com/2019/01/20/hello-world/</id>
+    <published>2019-01-20T14:48:07.440Z</published>
+    <updated>2019-01-20T14:48:07.440Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
