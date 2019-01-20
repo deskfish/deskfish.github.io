@@ -10,7 +10,11 @@
 
     <!--Description-->
     
-        <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+        <meta name="description" content="Gzip相关设置作用：用来压缩网络参数
+相关参数：①compression –是否开启Gzip压缩②compressableMimeType –压缩类型 默认：html、xml、txt
+③compressMinSize –压缩后输出内容大小（压缩后缓冲区大小）默认2048B（2KB）
+
+123456">
     
 
     <!--Author-->
@@ -20,7 +24,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Hello World">
+        <meta property="og:title" content="Gzip相关设置">
     
 
     <!--Open Graph Description-->
@@ -42,7 +46,7 @@
 
     <!-- Title -->
     
-    <title>Hello World - 孙振东的个人博客</title>
+    <title>Gzip相关设置 - 孙振东的个人博客</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -146,8 +150,8 @@
 
     <div class="post-header">
         <h1 class="title">
-            <a href="/2019/01/20/hello-world/">
-                Hello World
+            <a href="/2019/01/20/Gzip相关设置/">
+                Gzip相关设置
             </a>
         </h1>
         <div class="post-info">
@@ -165,20 +169,25 @@
         
 
         <!-- Post Content -->
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="Gzip相关设置"><a href="#Gzip相关设置" class="headerlink" title="Gzip相关设置"></a>Gzip相关设置</h1><p>作用：用来压缩网络参数</p>
+<p>相关参数：<br>①compression –是否开启Gzip压缩<br>②compressableMimeType –压缩类型 默认：html、xml、txt</p>
+<p>③compressMinSize –压缩后输出内容大小（压缩后缓冲区大小）默认2048B（2KB）</p>
+<p><img src="//upload-images.jianshu.io/upload_images/12417676-cde9769211cad3e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/460/format/webp" alt="image"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;</span><br><span class="line">               maxConnections=&quot;3000&quot;</span><br><span class="line">               maxThreads=&quot;500&quot;</span><br><span class="line">               acceptCount=&quot;500&quot;</span><br><span class="line">               compression=&quot;true&quot;</span><br><span class="line">               compressionMinSize=&quot;2048&quot;</span><br><span class="line">               connectionTimeout=&quot;20000&quot;</span><br><span class="line">               redirectPort=&quot;8443&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="其他项配置"><a href="#其他项配置" class="headerlink" title="其他项配置"></a>其他项配置</h1><p>enableLookups – 开启反查域名（对性能有影响，但是某种场景下很好用。）</p>
+<p>connectionTimeout – 网络连接超时阈值（默认20000）</p>
+<p>minSpareThreads – 最小空闲线程数（在没有访问的情况下最小保持多少活跃）</p>
+<p>最终版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;</span><br><span class="line">               maxConnections=&quot;3000&quot;</span><br><span class="line">               maxThreads=&quot;500&quot;</span><br><span class="line">               acceptCount=&quot;500&quot;</span><br><span class="line">               minspareThreads=&quot;100&quot;</span><br><span class="line">               compression=&quot;true&quot;</span><br><span class="line">               compressionMinSize=&quot;2048&quot;</span><br><span class="line">               connectionTimeout=&quot;20000&quot;</span><br><span class="line">               redirectPort=&quot;8443&quot; /&gt;</span><br></pre></td></tr></table></figure></p>
 
     </div>
 
     
 
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/Gzip/">#Gzip</a>
+        </div>
     
 
     <!-- Comments -->
